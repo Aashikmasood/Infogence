@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <title>Infogence</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Button to Open the Modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#logOut">
+          Open modal
+        </button>
+      
+        <!-- The Modal -->
+        <div class="modal " id="logOut">
+          <div class="modal-dialog logout_pop b_none">
+            <div class="modal-content">            
+              <!-- Modal Header -->
+              <div class="modal-header l_header b_none">                
+                <!-- <button type="button" class="close close_custom" data-dismiss="modal">&times;</button> -->
+				<img class="close close_custom" data-dismiss="modal" src="images/popup-close.png">
+              </div>              
+              <!-- Modal body -->
+              <div class="modal-body b_circle b_none">
+                <div class="logout_circle align-items-center" style="width: 25%; height: 25%;">
+                    <svg width="30" height="30" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.5152 3.54056L15 7.53056L11.5152 11.4906V8.83556H6.30051V6.19556H11.5152V3.54056ZM9.41919 11.2206L10.7576 12.8256C9.44444 14.2856 8.02189 15.0156 6.4899 15.0156C4.6633 15.0156 3.125 14.2981 1.875 12.8631C0.625 11.4281 0 9.63556 0 7.48556C0 6.13556 0.286195 4.88556 0.858586 3.73556C1.43098 2.58556 2.20328 1.67806 3.1755 1.01306C4.14773 0.348064 5.20202 0.015564 6.33838 0.015564C7.88721 0.015564 9.35606 0.755563 10.7449 2.23556L9.41919 3.82556C8.4596 2.78556 7.43687 2.26556 6.35101 2.26556C5.0968 2.26556 4.0383 2.78556 3.1755 3.82556C2.31271 4.86556 1.88131 6.13556 1.88131 7.63556C1.88131 9.03556 2.32534 10.2406 3.21338 11.2506C4.10143 12.2606 5.1431 12.7656 6.33838 12.7656C7.44108 12.7656 8.46801 12.2506 9.41919 11.2206Z" fill="#C10707"/>
+                        </svg>
+                    
+                </div>
+              </div>
+              <div class="modal-body b_text b_none">                                    
+                    <h2>Oh Crap !</h2>
+                <h3>Are you sure want to <strong>Logout?</strong></h3> 
+                                               
+              </div>
+              <!-- Modal footer -->
+              <div class="modal-footer b_footer b_none"> 
+
+                <a href="01_Login.html"><button type="button" class="btn btn-submit b_none" style="width: 100%;padding: 5px 20px;text-transform: uppercase;font-weight: 600;background: #E7961D;border-radius: 5px;color: white;">Yes</button></a>
+                <button type="button" class="btn btn-cancel b_none" data-dismiss="modal" style="width: 100%;padding: 8px 20px;text-transform: uppercase;font-weight: 600;background:  #3B2232;border-radius: 5px;color: white;border: unset;">No</button>
+
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+</body>
+
+</html>

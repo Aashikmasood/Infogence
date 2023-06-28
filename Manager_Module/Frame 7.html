@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <title>Infogence</title>
+</head>
+<body>
+    <div class="container pt-5">
+        <div class="row pt-5">
+            <button type="button" class="btn btn-primary" type="button" class="btn btn-primary" data-toggle="modal" data-target="#frame7">Click here</button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="frame7" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header m-auto border-0">
+          <h5 class="modal-title pt-4" id="exampleModalLongTitle">Sample File</h5>
+        </div>
+        <div class="modal-body">
+              
+            <div class="container pl-5 pr-5">
+                <div class="form-group d-block ">
+                    <label class="theme-label">Upload Image</label>
+                    </div>
+
+                    <div class="upload-image-box text-center">
+                      <form runat="server">
+                        <input accept="image/*" type='file' id="imgInp" src="./images/manager-img/Group 2497.jpg" style="display: none;" />
+                        <img id="aproveimg" src="./images/manager-img/Group 2497.jpg" alt="your image" width="75%"/>
+                      </form>
+                    </div>
+            </div>
+        </div>
+        <div class="modal-footer justify-content-center border-0 pt-4 pb-5">
+          <button type="button" class="btn btn-submit" data-dismiss="modal" style="padding: 5px 15px;text-transform: uppercase;font-weight: 600;background: #E7961D;border-radius: 5px;color: white;">Approve</button>
+          <button type="button" class="btn btn-cancel" data-dismiss="modal" style="padding: 8px 25px;text-transform: uppercase;font-weight: 600;background:  #3B2232;border-radius: 5px;color: white;">Cancel</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+        </div>
+    </div>
+</body>
+<script>
+  imgInp.onchange = evt => {
+  const [file] = imgInp.files
+  if (file) {
+    aproveimg.src = URL.createObjectURL(file)
+  }
+}
+$('#aproveimg').click(function(){ $('#imgInp').trigger('click'); });
+// select theme
+$(document).ready(function() {
+  
+  $(".selLabel").click(function () {
+    $('.dropdown').toggleClass('active');
+  });
+  
+  $(".dropdown-list li").click(function() {
+    $('.selLabel').text($(this).text());
+    $('.dropdown').removeClass('active');
+    $('.selected-item p span').text($('.selLabel').text());
+  });
+  
+});
+</script>
+</html>

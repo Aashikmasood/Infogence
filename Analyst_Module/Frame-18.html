@@ -1,0 +1,171 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <title>Infogence</title>
+</head>
+<style>
+   
+   
+</style>
+<body>
+    <!-- Button trigger modal -->
+<div class="container pt-5">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+        Click Here
+      </button>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header m-auto border-0 pt-md-5">
+              <h5 class="modal-title" id="exampleModalLongTitle">Task assign to</h5>
+             
+            </div>
+            <div class="modal-body">
+
+                <div class="container px-md-5 px-xs-0">
+ 
+                    <div class="row">
+                        <label class="theme-label">Document Name</label>
+                        <div class="dropdown dropdown-1 toggle">
+                            <span class="selLabel" id="selLabel">Document List</span>
+                            <input type="hidden" name="cd-dropdown">
+                            <ul class="dropdown-list">
+                              <li data-value="0">
+                                <span>Project_DocumentName_001</span>
+                              </li>
+                              
+                              <li data-value="1">
+                                <span>Project_DocumentName_002</span>
+                              </li>
+                             
+                              <li data-value="2">
+                                <span>Project_DocumentName_003</span>
+                              </li>
+                           
+                            </ul>
+                          </div>
+                    </div>
+
+
+                    <div class="row">
+                        <label class="theme-label">Chapter Name</label>
+                        <div class="dropdown dropdown-2 toggle">
+                            <span class="selLabel1" id="selLabel1">Chapter List</span>
+                            <input type="hidden" name="cd-dropdown">
+                            <ul class="dropdown-list">
+                              <li data-value="0">
+                                <span>Project_ChapterName_001</span>
+                              </li>
+                              
+                              <li data-value="1">
+                                <span>Project_ChapterName_002</span>
+                              </li>
+                             
+                              <li data-value="2">
+                                <span>Project_ChapterName_003</span>
+                              </li>
+                           
+                            </ul>
+                          </div>
+                    </div>
+
+
+                    <div class="row">
+                        <label class="theme-label">Task Name</label>
+                        <div class="dropdown dropdown-3 toggle">
+                            <span class="selLabel2" id="selLabel2">Task List</span>
+                            <input type="hidden" name="cd-dropdown">
+                            <ul class="dropdown-list">
+                              <li data-value="0">
+                                <span>Project_TaskName_001</span>
+                              </li>
+                              
+                              <li data-value="1">
+                                <span>Project_TaskName_002</span>
+                              </li>
+                             
+                              <li data-value="2">
+                                <span>Project_TaskName_003</span>
+                              </li>
+                           
+                            </ul>
+                          </div>
+                    </div>
+                   
+
+
+                      
+
+
+                   
+                        </div>
+                      
+                      
+
+            </div>
+            <div class="modal-footer justify-content-center pb-md-5 border-0">
+                <button type="button" class="btn btn-success" data-dismiss="modal" style="padding: 5px 30px;text-transform: uppercase;font-weight: 600;">Reuse</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal" style="padding: 5px 20px;text-transform: uppercase;font-weight: 600;">Cancel</button>
+            </div>
+            </div>
+          </div>
+        </div>
+
+        
+</body>
+
+<script>
+  $(document).ready(function() {
+  
+  $("#selLabel").click(function () {
+    $('.dropdown-1').toggleClass('active');
+  });
+  
+  $(".dropdown-list li").click(function() {
+    $('#selLabel').text($(this).text());
+    $('.dropdown-1').removeClass('active');
+    $('.selected-item span').text($('#selLabel').text());
+  });
+  
+});
+
+
+$(document).ready(function() {
+  
+  $("#selLabel1").click(function () {
+    $('.dropdown-2').toggleClass('active');
+  });
+  
+  $(".dropdown-list li").click(function() {
+    $('#selLabel1').text($(this).text());
+    $('.dropdown-2').removeClass('active');
+    $('.selected-item span').text($('#selLabel1').text());
+  });
+  
+});
+
+$(document).ready(function() {
+  
+  $("#selLabel2").click(function () {
+    $('.dropdown-3').toggleClass('active');
+  });
+  
+  $(".dropdown-list li").click(function() {
+    $('#selLabel2').text($(this).text());
+    $('.dropdown-3').removeClass('active');
+    $('.selected-item span').text($('#selLabel2').text());
+  });
+  
+});
+</script>
+</html>
